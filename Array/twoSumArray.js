@@ -1,3 +1,7 @@
+
+
+// Time complexity O(nlogn)and Space O(1)
+
 function twoSumArray(array, targetSum) {
     array.sort((a,b) => a -b)
     let left = 0;
@@ -14,8 +18,4 @@ function twoSumArray(array, targetSum) {
     }
 }
 
-
 twoSumArray([3,2,9,22,90,34,22,88,2], 5)
-
-
-// 
