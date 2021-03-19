@@ -3,6 +3,8 @@
 
 /// Validate Subsequence array
 
+// Time complexity O(n)  space complexity O(1)
+
 
 function validateSubsequence(arr, seq) {
     let seqId = 0
