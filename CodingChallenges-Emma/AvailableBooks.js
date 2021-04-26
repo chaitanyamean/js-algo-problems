@@ -35,13 +35,13 @@ function Book(title,author,ISBN,numCopies) {
 // Class Component
 
 class Book {
-    constructor(title, author, ISBN, noOfCopies) {
+    constructor(title, author, ISBN, numCopies) {
         this.title = title;
         this.author = author;
         this.ISBN = ISBN;
         this.numCopies = numCopies;
     }
-
+    // Encapsulation 
     getAvailability() {
         if (this.numCopies === 0) {
             return 'no copies'
@@ -59,3 +59,20 @@ class Book {
         this.numCopies += noOfCopies
     }
 }
+
+
+class TechnicalBook extends Book {
+    constructor(title, author, ISBN, numCopies,edition){
+        super(title,author,ISBN, numCopies);
+        this.edition = edition;
+    }
+
+    getEdition() {
+        return `This current version of this book is ${this.edition}`
+    }
+}
+
+const Crackingthecoding = new TechnicalBook('codingcraking', 'andrew', 12222, 11, '2.3')
+
+console.log(Crackingthecoding.getAvailability())
+console.log(Crackingthecoding.getEdition())
