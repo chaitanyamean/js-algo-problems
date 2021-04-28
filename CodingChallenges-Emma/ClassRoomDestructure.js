@@ -15,3 +15,16 @@ const obj = {
     classList: ['Teacher', 'TA', 'S1', 'S2']
 }
 getStudents(obj);
+
+
+// Recursive
+
+function recProblem(str) {
+    if(str.length === 1) {
+        return 1
+    }
+    
+    return recProblem(str.slice(1))
+}
+
+recProblem('hello')
