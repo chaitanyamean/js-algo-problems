@@ -25,3 +25,12 @@ Portfolio Projects: https://www.linkedin.com/learning/web-portfolio-projects-sor
 Interview Questions: https://www.linkedin.com/learning/mastering-web-developer-interview-code-2/how-do-you-use-the-data-attribute-in-html
 
 Patterns: https://www.linkedin.com/learning/javascript-patterns-2/what-you-should-know
+
+
+Hacker Rank:
+
+Max element in the array
+Sum of all odd elements
+Prime or not
+Matrix Row Sum
+Right-angled triangle pattern 1
