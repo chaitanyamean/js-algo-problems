@@ -73,7 +73,6 @@ isEmpty() {
 
 # Final Code
 
-### peek method to get the top item in the stack
 ```javascript
 class Stack {
     constructor() {
@@ -104,8 +103,3 @@ Home>Kitchen>Appliances>Toaster
 
 A stack would be the optimal solution because the top mose item in the stack is the most recently added item.
 So when we want to go back we can pop of the last item(in this case **Toaster**) and render the state of the previous page
-
-```javascript
-let navigation = new Stact(['Home'])
-
-```
