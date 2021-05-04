@@ -66,7 +66,7 @@ peek() {
 ### isEmpty method to check is stack empty or not
 ```javascript
 isEmpty() {
-    return this.length  == 0
+    return this.length  === 0
 }
 ```
 
