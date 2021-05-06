@@ -137,7 +137,7 @@ pop {
 }
 ```
 
-### When there is more than one node in the list
+<!-- ### When there is more than one node in the list
 ```javascript
 pop {
     /* When the list is empty */
@@ -152,7 +152,7 @@ pop {
     return nodeToRemove;
     }
 }
-```
+``` -->
 
 
 
