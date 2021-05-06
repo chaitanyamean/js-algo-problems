@@ -13,11 +13,12 @@
 
  ### Linked List Methods
 
- push(Node): Add an element to the linked list
- pop(): Remove an element from the linked list
- get(index): Return an element from a given index
- delete(index): Delete an item from a given index
+ push(Node)/append: Add an element to the linked list - O(1)
+ pop(): Remove an element from the linked list - O(1)
+ get(index): Return an element from a given index - O(n)
+ delete(index): Delete an item from a given index - O(n)
  isEmpty(): Return a boolean indicating wheather the list is empty
+ prepend(): Add an element to the start of linked list  - O(1)
 
  ### Single-Linked vs Doubly-Linked List
  In Single-linked list each node has one pointer which points to next node/element in the list
@@ -101,6 +102,7 @@ push(value) {
         this.tail.next = newNode;
         this.tail = newNode;
     }
+    this.length++
 }
 ```
 
@@ -121,6 +123,9 @@ pop {
 ```
 
 ### When there is only one node in the list
+
+Need to reset Head and Tail pointers to Null
+
 ```javascript
 pop {
     /* When the list is empty */
