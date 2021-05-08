@@ -13,11 +13,32 @@ class LinkedList {
         this.length = 0
     }
 
+    isEmpty() {
+       return this.length === 0
+    }
+
+    printLinkedListValues() {
+        let arr = []
+      let currentNode = this.head
+      while(currentNode !== null) {
+        arr.push(currentNode.value)
+        currentNode = currentNode.next
+      }
+      console.log(arr)
+      return arr
+    }
+
     /* Adding a value to the end */
     append(value){
         let newNode = new Node(value);
-        this.tail.next = newNode;
-        this.tail = newNode;
+        if(this.isEmpty()) {
+            this.head = newNode;
+            this.tail = newNode;
+        } else {
+            this.tail.next = newNode;
+            this.tail = newNode;
+
+        }
         this.length++
     }
 
@@ -48,7 +69,6 @@ class LinkedList {
             newNode.next = holdingPointer;
             leader.next = newNode;
             this.length++
-
         }
     }
 
@@ -60,6 +80,22 @@ class LinkedList {
             count++
         }
         return currentNode
+    }
+
+    remove(idx) {
+        if(idx == 0) {
+            let newNode = this.head;
+            this.head = newNode.next;
+            this.length--;
+            return this.printLinkedListValues()
+        } else if(idx < 0 || idx > this.length) {
+            return null;
+        } else {
+            let leader = this.traverseNode(idx-1);
+            let unWantedNode = leader.next;
+            leader.next = unWantedNode.next;
+            this.length--;
+        }
     }
 }
 

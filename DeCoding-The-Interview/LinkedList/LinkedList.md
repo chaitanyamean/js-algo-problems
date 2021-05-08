@@ -6,6 +6,8 @@
 ***1) Value*** 
 ***2) Pointer***
 
+<!-- https://dynalist.io/d/5SccLds9RQxoDmuzkuCRE2ki -->
+
  Linked list use the ***last-in-first-out***
 
  To search a node in linked list we need to iterate every node in the linked list starting from Head LL
