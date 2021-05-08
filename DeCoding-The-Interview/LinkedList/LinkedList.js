@@ -97,6 +97,21 @@ class LinkedList {
             this.length--;
         }
     }
+
+    reverse() {
+        let first = this.head;
+        this.tail = this.head;
+        let second = first.next;
+
+        while(second) {
+            let temp = second.next;
+            second.next = first;
+            first = second;
+            second = temp;
+        }
+        this.head.next = null;
+        this.head = first
+    }
 }
 
 let ll = new LinkedList(10)

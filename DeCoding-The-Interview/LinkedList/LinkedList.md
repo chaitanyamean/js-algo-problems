@@ -15,10 +15,9 @@
 
  ### Linked List Methods
 
- push(Node)/append: Add an element to the linked list - O(1)
- pop(): Remove an element from the linked list - O(1)
+ append(Node)/append: Add an element to the linked list - O(1)
+ remove(index): Delete an item from a given index - O(n)
  get(index): Return an element from a given index - O(n)
- delete(index): Delete an item from a given index - O(n)
  isEmpty(): Return a boolean indicating wheather the list is empty
  prepend(): Add an element to the start of linked list  - O(1)
 
@@ -32,6 +31,18 @@ Doubly-linked list are great for removing the nodes because they have access to 
 In Single-linked it is hard to remove nodes, because 
     -- We need to iterate through list
     -- And keep track of previous node
+
+
+### Pros and cons
+PROS:
+Fast Insertion and Deletion
+Ordered
+Flexiable size
+
+CONS:
+Slow look up
+More memory
+
 
 https://visualgo.net/en/list
 
@@ -80,7 +91,7 @@ There are 2 scenarios to create a push method
 
 ### When list is empty
 ```javascript
-push(value) {
+append(value) {
     const newNode = new Node(value)
     if(this.isEmpty()) {
         this.head = newNode;
@@ -95,7 +106,7 @@ push(value) {
 2) Update tail to pointer to the new node and increment length
 
 ```javascript
-push(value) {
+append(value) {
     const newNode = new Node(value)
     if(this.isEmpty()) {
         this.head = newNode;
@@ -110,14 +121,15 @@ push(value) {
 
 ### Removing node from LL
 
-There are 2 scenarios to create a pop method 
+There are 2 scenarios to create a remove method 
     - When the list is empty
     - When there is only one node in the list
     - When there is more than one node in the list
+    - When index is sent is 0
 
 ### When list is empty
 ```javascript
-pop {
+remove(index) {
     if(this.isEmpty()) {
         return null
     }
@@ -129,7 +141,7 @@ pop {
 Need to reset Head and Tail pointers to Null
 
 ```javascript
-pop {
+remove(index) {
     /* When the list is empty */
     if(this.isEmpty()) {
         return null
@@ -144,9 +156,9 @@ pop {
 }
 ```
 
-<!-- ### When there is more than one node in the list
+### When there is more than one node in the list
 ```javascript
-pop {
+remove(index) {
     /* When the list is empty */
     if(this.isEmpty()) {
         return null
@@ -157,9 +169,28 @@ pop {
     this.tail = null
     this.length--
     return nodeToRemove;
+    } else if(index == 0) {
+
+    } else {
+            let leader = this.traverseNode(idx-1);
+            let unWantedNode = leader.next;
+            leader.next = unWantedNode.next;
+            this.length--;
     }
 }
-``` -->
+
+traverseNode(index) {
+        let count = 0
+        let currentNode = this.head
+        while (count !== index) {
+            currentNode = currentNode.next;
+            count++
+        }
+        return currentNode
+    }
+```
+
+
 
 
 
