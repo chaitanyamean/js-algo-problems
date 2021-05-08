@@ -5,12 +5,12 @@ Stacks are
 --> Stacks doesn't offer constant time accessing the nth Element
 
 # STACK Methods:
-1) pop(): Remove the top item form the stack
-2) push(item): Adds an item to the top of the stack
-3) peek(): Returns the item at the top of the stack(but does not remove it)
+1) pop(): Remove the top item form the stack - O(1)
+2) push(item): Adds an item to the top of the stack - O(1)
+3) peek(): Returns the item at the top of the stack(but does not remove it) - O(1)
 4) isEmpty(): Returns true if the stack is empty
 5) get length(): Returns the number of items in the stack 
-
+6) Look up: -O(n)
 
 ### Building the stack:
 1) Create class Stack

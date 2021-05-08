@@ -13,11 +13,12 @@ Adding and removing of the items are more difficult than stacks
 because we are adding items from one side and removing items from other side
 
 ### Queue Methods
-enqueue(): Add an item to the back of the queue
-dequeue(): Remove an item from the front of the queue
-peek(): Return the item at the front of the queue
+enqueue(): Add an item to the back of the queue - O(1)
+dequeue(): Remove an item from the front of the queue - O(1)
+peek(): Return the item at the front of the queue - O(1)
 isEmpty(): Chech wheather the queue is empty, Return true if length is 0
 get length(): Retur the lenght of the queue
+look up - O(n)
 
 ### Coding a queue in JavaScript
 1) Create Queue Class with one property: queue

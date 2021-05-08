@@ -112,6 +112,20 @@ class LinkedList {
         this.head.next = null;
         this.head = first
     }
+
+    get(index) {
+        if (index < 0 || index > this.length || this.isEmpty()) {
+        return null;
+        }
+        /* We want the first node */
+        if (index === 0) {
+        return this.head;
+        }
+        /* We want the last node */
+        if (index === this.length - 1) {
+        return this.tail;
+        }
+        }
 }
 
 let ll = new LinkedList(10)
