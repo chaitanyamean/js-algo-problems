@@ -8,4 +8,4 @@ let userObj = {
     age: 22
 }
 
-console.log(userObj.userName)
+console.log(userObj)
