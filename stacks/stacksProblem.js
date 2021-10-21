@@ -5,7 +5,6 @@
 function isBalanced(input) {
     if (input === null) {  return true; }
 
-  let convertToArray = input.split("");
 
   let stack = [];
 
@@ -14,14 +13,16 @@ function isBalanced(input) {
       '{': '}',
       '[': ']'
   }
-console.log(input)
   for(let char of input) {
-      console.log(stack)
       if(bracket[char]) {
+          console.log('Bracket',char);
           stack.push(bracket[char])
-      } else {
-          if(stack.pop() !== char) return false
-      }
+        } else {
+            console.log('Else',char);
+            if(stack.pop() !== char) return false
+        }
+          console.log('Stack',stack)
+      
   }
   return (!stack.length)
   
@@ -32,4 +33,23 @@ console.log(input)
 
 
 
-console.log(isBalanced("[]()"))
+// console.log(isBalanced("[]((()()(((()))))"))
+
+
+
+const add = function(a) {
+    
+    return function (b) {
+        if(b) {
+            console.log(a)
+            return add(a+b)
+        }
+        return a
+    }
+    
+}
+
+console.log(add(2)(3)(4)())
+
+// let intermediate = add(2)
+// console.log(intermediate(3))

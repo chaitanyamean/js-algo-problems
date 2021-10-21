@@ -3,10 +3,7 @@
 
 
 function cal(value) {
-
-
     const accumlator = value
-
     const obj = {
         add,
         sub,
@@ -38,3 +35,9 @@ var result = cal(2)
 
 
 console.log(result)
+
+// flattenn array
+// ()()() problem
+// reverse a string
+// remove dup from array
+// 

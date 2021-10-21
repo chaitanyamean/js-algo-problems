@@ -1,37 +1,28 @@
-function higherBound(arr1, num) {
-
+// Finding upper bound in an array
+function upperBound(arr1, num) {
     let lo = 0;
     let hi = arr1.length -1
-    console.log(hi,lo)
-    console.log('LEN', hi)
         while((hi - lo) > 1) {
           let mid = Math.floor((lo + hi)/ 2)
-          console.log(mid);
           if(arr1[mid] <= num) {
             lo = mid + 1
-            
           } else {
             hi = mid
           }
         }
-  
-        console.log(lo, hi)
         if(arr1[lo]> num) {
             return lo;
         }
-  
         if (arr1[hi] > num) {
           return hi
         }
+        // if(num > arr1[hi]) {
+        //   return arr1.length
+        // }
         return -1
-  
-  
-  
   }
-  
-  
-  let hb = higherBound([3, 7, 11, 17], 10);
-  console.log(hb);
+  let hb = upperBound([2,3,4,6,7,8], 5);
+  console.log(hb); // 4
 
 
 
@@ -72,6 +63,6 @@ function solve(A, B){
 }
 
 
-console.log(
-solve([ 23, 36, 58, 59 ], 
-  [ 3, 207, 62, 654, 939, 680, 760 ]))
+// console.log(
+// solve([ 23, 36, 58, 59 ], 
+//   [ 3, 207, 62, 654, 939, 680, 760 ]))
